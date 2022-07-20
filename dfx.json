@@ -1,0 +1,35 @@
+{
+  "canisters": {
+    "valiantBank_backend": {
+      "main": "src/valiantBank_backend/main.mo",
+      "type": "motoko"
+    },
+    "valiantBank_frontend": {
+      "dependencies": [
+        "valiantBank_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/valiantBank_frontend/src/index.html"
+      },
+      "source": [
+        "src/valiantBank_frontend/assets",
+        "dist/valiantBank_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "dfx": "0.11.0",
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  },
+  "version": 1
+}
